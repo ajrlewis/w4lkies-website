@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+
+{% block header %}
+  <div class="section hero">
+    <div class="container">
+      <div class="row">
+        <div class="one-half column">
+          <h1 class="hero-heading">
+          Fully insured dog caring & walking services based in Chiswick, London, W4.
+          </h1>
+          <a class="button button-primary" href="mailto:hello@w4lkies.com?subject=Arrange a meet and greet!">Book you free meet and greet!</a>
+        </div>
+        <div class="one-half column logos">
+          <img class="logo" src="/static/img/logo-transparent-background.png">
+          <img class="logo" src="/static/img/logo-transparent-background.png">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock header %}
+
+{% block nav %}{% endblock nav %}
+
+{% block main %}
+<div class="section colored-section">
+  <div class="container about-us">
+    <h1>About US</h1>
+    <div class="row">
+      Hi there, my name is Sophia and I'm the owner of W4lkies, a  <span>small and independent dog caring and walking business</span> based in Chiswick, <span>London, W4</span>.
+    </div>
+    <br>
+    <div class="row">
+      My team and I absolutely love dogs and have a lot of experience working with them. 
+      We're passionate about providing a <span>safe and enjoyable experience</span> for every dog in our care.
+      That's why we are <span>fully insured</span> for your peace of mind.
+    </div>
+    <br>
+  </div>
+</div>
+
+<div class="section transparent-section services">
+  <div class="container">
+    <h1 class="section-heading">Our Services</h1>
+    <p class="section-description">We provide 1-hour services from <span>Monday to Friday</span>, with two time slots available: <span>AM (8am to 12pm) and PM (12pm to 6pm)</span>. We aim to schedule your preferred time within a 1-hour range of your chosen slot.
+    <!-- See Terms of Service -->
+  </p>
+  </div>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="four columns service">
+        <img src="/static/img/service-solo-dog-walk.png" width="300px" height="300px">
+        <br>
+        <br>
+        <h2>Solo Dog Walk</h2>
+        <h3>£25 per hour</h3>
+        <p>For dogs who prefer a bit more one-on-one attention, I offer solo walks tailored to their individual needs. I take regular photos during the walks and create fun and entertaining videos that are shared on Instagram. This dog walking service is tailored for the modern digital age, ensuring your furry friend receives the utmost care and attention.</p>
+        <a class="button button-primary" href="mailto:{{ config['WEBSITE_EMAIL'] }}?subject=Book a Solo Dog Walk!">Book now!</a>
+      </div>
+      <div class="four columns service">
+        <img src="/static/img/service-add-extra-dog.png" width="300px" height="300px">
+        <br>
+        <br>
+        <h2>Add Extra Dog to Solo Walk!</h2>
+        <h3>£7.50 per dog</h3>
+        <p>Add an extra dog from the same household to 1-hour dog walk</p>
+        <a class="button button-primary" href="mailto:{{ config['WEBSITE_EMAIL'] }}?subject=Book a Solo Dog Walk!">Book now!</a>
+      </div>
+      <div class="four columns service">
+        <img src="/static/img/service-bespoke.png" width="300px" height="300px">
+        <br>
+        <br>
+        <h2>Bespoke</h2>
+        <h3>Flexible pricing and duration based on your needs</h3>
+        <p>We offer bespoke services for your dog(s) to suit your needs.
+          From pop-in visits to at-home enrichment games, we've got your pup covered!
+        </p>
+        <a class="button button-primary" href="mailto:hello@w4lkies.com?subject=Book a Bespoke Service!">Book now!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="section colored-section our-team">
+    <div class="container">
+      <h1>Our Team</h1>
+
+    <div class="row">
+      <div class="six columns">
+        <img src="/static/img/team-sophia.jpg" alt="Founder Profile Picture" class="profile">
+        <br>
+        <h3>Sophia Lewis</h3>
+        <h4>Founder</h4>
+        <br>
+        <p>As the founder of W4lkies, a premier dog walking business in London W4, I bring a wealth of experience in the pet care industry. With a successful track record of establishing a dog walking business in Edinburgh, Scotland, I have honed my skills in providing top-notch care for furry companions. Prior to founding W4lkies, I worked as a receptionist at a veterinary clinic in Shepherd's Bush, London, where I gained valuable insights into animal care and welfare. Combining my passion for dogs with my professional expertise, I am dedicated to ensuring the well-being and happiness of every canine client. W4lkies is committed to providing reliable and loving dog walking services in the vibrant community of London W4. Let us take your furry friend on a safe and enjoyable adventure while you're away. Your pet's happiness is our top priority!</p>
+      </div>
+      <div class="six columns">
+        <img src="/static/img/team-sara.jpg" alt="Dog Walker Profile Picture" class="profile">
+        <br>
+        <h3>Sara Kiepura</h3>
+        <h4>Dog Walker</h4>
+        <br>
+        <p>
+         Growing up on a farm in Poland surrounded by various animals, I have always had a deep connection with pets. From chickens, pigs, horses, and cows to cats and dogs, caring for animals has been a passion of mine since childhood. After moving to Italy as a teenager, I rescued an abandoned dog and welcomed many cats into our countryside home. Now based in London for the past 10 years, I have transitioned from a career in hospitality to pursue my love for dogs. As a dedicated animal lover, I am excited to devote my time and affection to our canine companions. In my free time, I enjoy traveling, exploring new places, and taking long walks in nature.
+        </p>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+
+  <div class="section transparent-section our-dogs">
+    <div class="container">
+      <h1>Our Dogs</h1>
+
+      <div class="row">
+        <div class="twelve columns">
+          <p>Here's a small selection of some of the dogs we currently care for with testimonials from their owners!</p>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="three columns">
+          <img class="gallery" src="/static/img/dog-rocky-01.jpg" alt="Rocky Image">
+          <br>
+          <br>
+          <h3>Rocky</h3>
+          <span style="font-size: xx-large;">“</span>
+          <p>
+          I can't say enough great things about Sophia and her excellent dog walking services. From the first time I met her, it was abundantly clear that Sophia is a true dog lover and has a natural rapport with furry friends of all breeds and sizes.  What sets Sophia apart is her incredible passion, patience, and attentiveness when it comes to caring for dogs. She doesn't just walk them - she provides excellent exercise tailored to each dog's unique needs and energy levels.</p>
+        </div>
+        <div class="three columns">
+          <img class="gallery"  src="/static/img/dog-simon-01.jpg" alt="Simon Image">
+          <br>
+          <br>
+          <h3>Simon</h3>
+          <span style="font-size: xx-large;">“</span>
+          <p>Sophia has been walking Simon, my miniature Schnauzer, for a couple months now and I am really happy with her. She is on time, reliable and very good with Simon. She clearly loves dogs and mine loves her a lot. He is always very happy to see her and comes back tired and having had a lovely adventure. I can't recommend W4lkies highly enough.</p>
+        </div>
+        <div class="three columns">
+          <img class="gallery" src="/static/img/dog-hugo-01.png" alt="Hugo Image">
+          <br>
+          <br>
+          <h3>Hugo</h3>
+          <span style="font-size: xx-large;">“</span>
+          <p>We are extremely lucky to have found Sophia - she is friendly, trustworthy, and really cares about our dog Hugo💕 Would highly recommend to anyone looking for a dog walker!</p>
+        </div>
+        <div class="three columns">
+          <img class="gallery" src="/static/img/dog-olly-01.png" alt="Olly Image">
+          <br>
+          <br>
+          <h3>Olly</h3>
+          <span style="font-size: xx-large;">“</span>
+          <p>Sophia has been wonderful in looking after our dog Olly. He can be rather stubborn in nature and now slowing down with age, but Sophia has shown such great sincere attention, patience and care to Olly throughout. Always reliable and lovely daily updates too. 💯 recommend!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section colored-section get-in-touch">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <div class="row">
+        <div class="twelve columns">
+          <a href="mailto:hello@w4lkies.com?subject=Book a Dog Walk">Contact us</a> by email to book your free meet-and-greet with no obligations today!
+        </div>
+      </div>
+      <br>
+      <div class="row">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29959.723549100447!2d-0.26682515930183!3d51.485789880089875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x292ff8503b646f65%3A0x3a7dee181ebfd80d!2sw4lkies!5e0!3m2!1sen!2suk!4v1735388295574!5m2!1sen!2suk" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+
+{% endblock main %}
+
+{% block footer %}
+  <div class="container" style="text-align:center;">
+    <br>
+    <div class="row">
+      <div class="twelve columns">
+        © 2025 London W4lkies Ltd. All rights reserved.
+        <br>
+        <br>
+      </div> 
+    </div> 
+    <div class="row">
+      <div class="four columns">
+        <h4>Contact</h4>
+        E-mail: <a href="mailto:{{ config['WEBSITE_EMAIL'] }}">{{ config["WEBSITE_EMAIL"] }}</a>
+        <br>
+        Phone: <a href="tel:{{ config['WEBSITE_PHONE'] }}">{{ config["WEBSITE_PHONE"] }}</a>
+        <br>
+        <br>
+      </div> 
+      <div class="four columns">
+        <h4>Legal</h4>
+        <a href="/legal/terms-of-service">Terms of Service</a>
+        <br>
+        <a href="/legal/privacy">Privacy</a>
+        <br>
+        <a href="/legal/cookies">Cookies</a>
+        <br>
+        Site Map: <a href="/sitemap') }}">Robots welcome!</a>
+        <br>
+        <br>
+      </div>
+      <div class="four columns" style="word-wrap: break-word;">
+          <h4>Social</h4>
+          Instagram: <a href="https://www.instagram.com/{{ config['WEBSITE_INSTAGRAM'] }}" target="_blank">@{{ config["WEBSITE_INSTAGRAM"] }}</a>
+          <br>
+          Nostr: <a href="https://primal.net/p/{{ config['WEBSITE_NPUB'] }}" target="_blank">{{ config["WEBSITE_NPUB"] }}</a>
+          <br>
+          Github: <a href="https://github.com/ajrlewis/{{ config['WEBSITE_GITHUB'] }}" target="_blank">{{ config['WEBSITE_GITHUB'] }}</a>
+          <br>
+          <br>
+      </div> 
+    </div> 
+    <br>
+  </div>
+{% endblock footer %}
