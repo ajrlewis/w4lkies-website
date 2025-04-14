@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block header %}
+  <div class="section hero">
+    <div class="container">
+      <div class="row">
+        <div class="one-half column">
+          <h1 class="hero-heading">
+          
+          </h1>
+        </div>
+        <div class="one-half column logos">
+          <img class="logo" src="/static/img/logo-transparent-background.png">
+          <img class="logo" src="/static/img/logo-transparent-background.png">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock header %}
+
+{% block nav %}{% endblock nav %}
+
+{% block main %}
+    <div class="container">
+        <h2>Sign Up</h2>
+    </div>
+{% endblock main %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block footer %}
+  <div class="container" style="text-align:center;">
+    <br>
+    <div class="row">
+      <div class="twelve columns">
+        © 2025 London W4lkies Ltd. All rights reserved.
+        <br>
+        <br>
+      </div> 
+    </div> 
+    <div class="row">
+      <div class="four columns">
+        <h4>Contact</h4>
+        E-mail: <a href="mailto:{{ config['WEBSITE_EMAIL'] }}">{{ config["WEBSITE_EMAIL"] }}</a>
+        <br>
+        Phone: <a href="tel:{{ config['WEBSITE_PHONE'] }}">{{ config["WEBSITE_PHONE"] }}</a>
+        <br>
+        <br>
+      </div> 
+      <div class="four columns">
+        <h4>Legal</h4>
+        <a href="/legal/terms-of-service">Terms of Service</a>
+        <br>
+        <a href="/legal/privacy">Privacy</a>
+        <br>
+        <a href="/legal/cookies">Cookies</a>
+        <br>
+        Site Map: <a href="/sitemap') }}">Robots welcome!</a>
+        <br>
+        <br>
+      </div>
+      <div class="four columns" style="word-wrap: break-word;">
+          <h4>Social</h4>
+          Instagram: <a href="https://www.instagram.com/{{ config['WEBSITE_INSTAGRAM'] }}" target="_blank">@{{ config["WEBSITE_INSTAGRAM"] }}</a>
+          <br>
+          Nostr: <a href="https://primal.net/p/{{ config['WEBSITE_NPUB'] }}" target="_blank">{{ config["WEBSITE_NPUB"] }}</a>
+          <br>
+          Github: <a href="https://github.com/ajrlewis/{{ config['WEBSITE_GITHUB'] }}" target="_blank">{{ config['WEBSITE_GITHUB'] }}</a>
+          <br>
+          <br>
+      </div> 
+    </div> 
+    <br>
+  </div>
+{% endblock footer %}
