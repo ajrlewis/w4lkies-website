@@ -24,6 +24,179 @@
     <div class="container">
         <h2>Sign Up</h2>
     </div>
+<form method="POST" action="{{ url_for('sign_up_bp.add') }}">
+  {{ form.csrf_token }}
+    <!-- Customer information -->
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <br>
+          <h3>Customer Information</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          {{ form.customer_name.label }}
+          {{ form.customer_name }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          {{ form.customer_phone.label }}
+          {{ form.customer_phone }}
+        </div>
+        <div class="six columns">
+          {{ form.customer_email.label }}
+          {{ form.customer_email }}
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="twelve columns">
+          <h4>Emergency Contact</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">      
+          {{ form.customer_emergency_contact_name.label }}
+          {{ form.customer_emergency_contact_name }}
+        </div>
+        <div class="six columns">
+          {{ form.customer_emergency_contact_phone.label }}
+          {{ form.customer_emergency_contact_phone }}
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+  <!-- Dog information -->
+  <div class="team">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <br>
+          <h2>Dog Information</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          {{ form.dog_name.label }}
+          <div style="color: black;">
+            {{ form.dog_name }}
+          </div>
+        </div>
+        <div class="six columns">
+          {{ form.dog_date_of_birth.label }}
+          <div style="color: black;">
+            {{ form.dog_date_of_birth }}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns" >
+          {{ form.dog_breed.label }}
+          <div style="color: black;">
+            {{ form.dog_breed(id="dog-breed-name-select") }}
+          </div>
+        </div>
+        <div class="six columns" id="other-dog-breed-name-group" style="display: none; color: black;">
+          {{ form.other_dog_breed.label }}
+          <div style="color: black;">
+            {{ form.other_dog_breed }}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns u-full-width" style="color: black;">
+          {{ form.vet_name.label }}
+          <div style="color: black;">
+            {{ form.vet_name(id="vet-name-select") }}
+          </div>
+        </div>
+        <div class="six columns u-full-width" id="other-vet-name-group" style="display: none; color: black;">
+          {{ form.other_vet_name.label }}
+          <div style="color: black;">
+            {{ form.other_vet_name }}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="three columns">
+          {{ form.dog_is_allowed_treats.label }} 
+          <div class="checkbox" onclick="toggleCheckbox(this)">
+            {{ form.dog_is_allowed_treats }}
+          </div>
+        </div>
+        <div class="three columns">
+          {{ form.dog_is_allowed_off_the_lead.label }} 
+          <div class="checkbox" onclick="toggleCheckbox(this)">
+            {{ form.dog_is_allowed_off_the_lead }}
+          </div>
+        </div>
+        <div class="three columns">
+          {{ form.dog_is_allowed_on_social_media.label }} 
+          <div class="checkbox" onclick="toggleCheckbox(this)">
+            {{ form.dog_is_allowed_on_social_media }}
+          </div>
+        </div>
+        <div class="three columns">
+          {{ form.dog_is_neutered_or_spayed.label }} 
+          <div class="checkbox" onclick="toggleCheckbox(this)">
+            {{ form.dog_is_neutered_or_spayed }}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          {{ form.dog_behavioral_issues.label }}
+          <div style="color: black;">
+            {{ form.dog_behavioral_issues }}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          {{ form.dog_medical_needs.label }}
+          <div style="color: black;">
+            {{ form.dog_medical_needs }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <!-- Consent -->
+  <div class="clients">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <br>
+          <h2>Consent & Submit</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          {{ form.consent.label }} 
+          <div class="checkbox" onclick="toggleCheckbox(this)">
+            {{ form.consent }}
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="twelve columns">
+          {{ form.submit }}
+          <p>By submitting this form, you confirm that you have read and agree to our <a href="/legal" target="_blank">privacy notice</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+
+    </div>
 {% endblock main %}
 
 {% block scripts %}{% endblock scripts %}

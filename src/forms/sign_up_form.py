@@ -17,20 +17,20 @@ class SignUpForm(FlaskForm):
     customer_name = StringField(
         "Name",
         validators=[DataRequired()],
-        render_kw={"placeholder": "Daphne Blake", "class": "u-full-width"},
+        render_kw={"placeholder": "Enter your full name", "class": "u-full-width"},
     )
 
     customer_phone = TelField(
         "Phone",
         validators=[DataRequired()],
-        render_kw={"placeholder": "(+44) 0123 456789", "class": "u-full-width"},
+        render_kw={"placeholder": "Enter your phone number", "class": "u-full-width"},
     )
 
     customer_email = StringField(
         "Email",
         validators=[DataRequired()],
         render_kw={
-            "placeholder": "daphne@themysterymachine.com",
+            "placeholder": "Enter your email address",
             "class": "u-full-width",
         },
     )
@@ -38,13 +38,19 @@ class SignUpForm(FlaskForm):
     customer_emergency_contact_name = StringField(
         "Name",
         validators=[DataRequired()],
-        render_kw={"placeholder": "Fred Jones", "class": "u-full-width"},
+        render_kw={
+            "placeholder": "Enter the name of your emergency contact",
+            "class": "u-full-width",
+        },
     )
 
     customer_emergency_contact_phone = TelField(
         "Phone",
         validators=[DataRequired()],
-        render_kw={"placeholder": "(+44) 1234 567890", "class": "u-full-width"},
+        render_kw={
+            "placeholder": "Enter the phone number of your emergency contact",
+            "class": "u-full-width",
+        },
     )
 
     customer_signed_up_on = DateField("customer_signed_up_on", default=datetime.utcnow)
@@ -63,7 +69,10 @@ class SignUpForm(FlaskForm):
     dog_name = StringField(
         "Name",
         validators=[DataRequired()],
-        render_kw={"placeholder": "Scooby Doo", "class": "u-full-width"},
+        render_kw={
+            "placeholder": "Enter the name of your dog",
+            "class": "u-full-width",
+        },
     )
 
     dog_breed = StringField(

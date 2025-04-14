@@ -22,8 +22,10 @@ def create_app(Config) -> Flask:
     with app.app_context():
         from blueprints.index_bp import index_bp
         from blueprints.sign_up_bp import sign_up_bp
+        from blueprints.legal_bp import legal_bp
 
         app.register_blueprint(index_bp, url_prefix="/")
         app.register_blueprint(sign_up_bp, url_prefix="/sign-up")
+        app.register_blueprint(legal_bp, url_prefix="/legal")
 
         return app
